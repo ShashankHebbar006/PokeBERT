@@ -11,7 +11,8 @@ logging.basicConfig(filename="app.log",
                     filemode='a',
                     style="{",
                     datefmt="%Y-%m-%d %H:%M")
-logger = logging.getLogger()
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 class ExtractPokemonStrategyData:
     def __init__(self,save_filename,html_filename,url):
